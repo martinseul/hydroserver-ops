@@ -14,12 +14,8 @@ permissions:
 jobs:
   setup-deployment:
     runs-on: ubuntu-20.04
-
-    env:
-      AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-      AWS_IAM_ROLE: ${{ secrets.AWS_IAM_ROLE }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}
-      TERRAFORM_BUCKET: ${{ secrets.TERRAFORM_BUCKET }}
+    environment: ${{ github.event.inputs.environment }}
+    
     defaults:
       run:
         working-directory: ./terraform/aws
