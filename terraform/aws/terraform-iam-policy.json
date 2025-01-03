@@ -126,7 +126,7 @@
                     "iam:PermissionsBoundary": "arn:aws:iam::425406986545:policy/HydroServerIAMPermissionBoundary"
                 }
             }
-        }
+        },
         {
             "Effect": "Allow",
             "Action": [
