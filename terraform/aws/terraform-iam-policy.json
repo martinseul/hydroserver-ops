@@ -16,8 +16,8 @@
                 "iam:PutRolePermissionsBoundary"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR_ACCOUNT_ID:role/hydroserver-ec2*",
-                "arn:aws:iam::YOUR_ACCOUNT_ID:instance-profile/hydroserver-ec2*"
+                "arn:aws:iam::425406986545:role/hydroserver-ec2*",
+                "arn:aws:iam::425406986545:instance-profile/hydroserver-ec2*"
             ]
         },
         {
@@ -27,7 +27,7 @@
                 "iam:AttachRolePolicy",
                 "iam:DetachRolePolicy"
             ],
-            "Resource": "arn:aws:iam::YOUR_ACCOUNT_ID:role/hydroserver-ec2*",
+            "Resource": "arn:aws:iam::425406986545:role/hydroserver-ec2*",
             "Condition": {
                 "StringLike": {
                     "iam:PolicyArn": [
@@ -73,7 +73,7 @@
                 "iam:SetDefaultPolicyVersion"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR_ACCOUNT_ID:policy/HydroServerIAMPermissionBoundary"
+                "arn:aws:iam::425406986545:policy/HydroServerIAMPermissionBoundary"
             ]
         },
         {
@@ -89,7 +89,7 @@
             ],
             "Condition": {
                 "StringEquals": {
-                    "iam:PermissionsBoundary": "arn:aws:iam::YOUR_ACCOUNT_ID:policy/HydroServerIAMPermissionBoundary"
+                    "iam:PermissionsBoundary": "arn:aws:iam::425406986545:policy/HydroServerIAMPermissionBoundary"
                 }
             }
         },
@@ -101,12 +101,12 @@
                 "iam:PutRolePermissionsBoundary"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR_ACCOUNT_ID:user/*",
-                "arn:aws:iam::YOUR_ACCOUNT_ID:role/*"
+                "arn:aws:iam::425406986545:user/*",
+                "arn:aws:iam::425406986545:role/*"
             ],
             "Condition": {
                 "StringNotEquals": {
-                    "iam:PermissionsBoundary": "arn:aws:iam::YOUR_ACCOUNT_ID:policy/HydroServerIAMPermissionBoundary"
+                    "iam:PermissionsBoundary": "arn:aws:iam::425406986545:policy/HydroServerIAMPermissionBoundary"
                 }
             }
         },
@@ -118,12 +118,12 @@
                 "iam:CreateRole"
             ],
             "Resource": [
-                "arn:aws:iam::YOUR_ACCOUNT_ID:user/*",
-                "arn:aws:iam::YOUR_ACCOUNT_ID:role/*"
+                "arn:aws:iam::425406986545:user/*",
+                "arn:aws:iam::425406986545:role/*"
             ],
             "Condition": {
                 "StringNotEquals": {
-                    "iam:PermissionsBoundary": "arn:aws:iam::YOUR_ACCOUNT_ID:policy/HydroServerIAMPermissionBoundary"
+                    "iam:PermissionsBoundary": "arn:aws:iam::425406986545:policy/HydroServerIAMPermissionBoundary"
                 }
             }
         }
