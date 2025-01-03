@@ -14,7 +14,7 @@ permissions:
 jobs:
   setup-deployment:
     runs-on: ubuntu-20.04
-    environment: ${{ github.event.inputs.environment }}
+
     env:
       AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
       AWS_IAM_ROLE: ${{ secrets.AWS_IAM_ROLE }}
