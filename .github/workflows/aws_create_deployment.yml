@@ -36,7 +36,7 @@ jobs:
         uses: hashicorp/setup-terraform@v1
 
       - name: Terraform Init
-        run: terraform init -backend-config="bucket=${{ vars.TERRAFORM_BUCKET }}" -backend-config="region=${{ vars.AWS_REGION }}" -backend-config="key=state/aws_application_${{ github.event.inputs.environment }}"
+        run: terraform init -backend-config="bucket=${{ vars.TERRAFORM_BUCKET }}" -backend-config="region=${{ vars.AWS_REGION }}" -backend-config="key=aws_application_${{ github.event.inputs.environment }}"
   
       - name: Terraform Plan
         id: plan
